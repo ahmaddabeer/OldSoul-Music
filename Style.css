@@ -5,33 +5,42 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 /* Navigation Bar Styles */
 nav {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
+/* Navigation Links */
 nav ul li {
-    margin: 0 10px;
     color: white;
-}
-
-nav ul li.brand {
+    font-size: 14px;
     display: flex;
     align-items: center;
+}
+
+nav ul li.nav-item.left {
+    display: flex;
+    gap: 15px; /* Spacing between Home and About */
+    margin-right:auto;
+    font-size: 8px;
 }
 
 nav ul li.nav-item {
@@ -44,83 +53,92 @@ nav ul li.nav-item:hover {
 
 /* Logo Styles */
 .logo {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/* Animated Photo Placeholder */
+/* Animated Photo */
 .animated-photo img {
-    height: 70px;
+    max-height: 30px;
     width: auto;
+    margin: 0 10px;
     animation: float 3s infinite ease-in-out;
 }
 
-/* Simple Floating Animation */
+/* Floating Animation */
 @keyframes float {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
     100% {
         transform: translateY(0);
     }
 }
 
-/* Search Bar Styles in Nav */
+/* Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
 }
 
 .search-input {
-    padding: 8px;
-    width: 200px;
+    padding: 4px;
+    width: 120px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 5px;
+    font-size: 12px;
 }
 
 .search-button {
-    padding: 8px 15px;
+    padding: 4px 8px;
     background-color: #555;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .search-button:hover {
     background-color: #777;
 }
 
-/* Responsive Design for Mobile Screens */
+/* Responsive Design */
 @media (max-width: 720px) {
-    nav ul {
+    nav {
         flex-wrap: wrap;
-        justify-content: space-around;
+        flex-direction: row;
     }
 
-    .nav-item, .search-bar, .animated-photo {
-        margin-top: 10px;
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo, .animated-photo img {
+        max-height: 25px;
     }
 
     .search-input {
-        width: 100%;
+        width: 100px;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        justify-content: flex-end;
     }
 
     .search-button {
-        width: 100%;
-        margin-top: 5px;
+        padding: 3px 6px;
     }
 }
 
-/* Responsive Design for Larger Screens */
-@media (min-width: 721px) {
-    nav ul {
-        flex-direction: row;
-    }
-}
+
