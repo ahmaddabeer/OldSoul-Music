@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    color: white;
+}
+
+nav ul li.brand {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.nav-item {
+    cursor: pointer;
+}
+
+nav ul li.nav-item:hover {
+    text-decoration: underline;
+}
+
+/* Logo Styles */
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Animated Photo Placeholder */
+.animated-photo img {
+    height: 70px;
+    width: auto;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Simple Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Search Bar Styles in Nav */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-button {
+    padding: 8px 15px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 720px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nav-item, .search-bar, .animated-photo {
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 721px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
