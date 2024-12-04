@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /* General Styles */
 body {
@@ -10,13 +13,16 @@ body {
 
 /* Navigation Bar Styles */
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: #1a1a1a;
+    /* Darker background for elegance */
+    color: #f0f0f0;
+    /* Softer white text */
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Add subtle shadow for depth */
 }
 
 nav ul {
@@ -25,38 +31,32 @@ nav ul {
     align-items: center;
     padding: 0;
     margin: 0;
-    width: 100%;
 }
 
-/* Navigation Links */
 nav ul li {
-    color: white;
+    color: #f0f0f0;
     font-size: 14px;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li.nav-item.left {
-    display: flex;
-    gap: 15px; /* Spacing between Home and About */
-    margin-right:auto;
-    font-size: 8px;
-}
-
-nav ul li.nav-item {
+    margin: 0 10px;
+    padding: 5px 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li.nav-item:hover {
-    text-decoration: underline;
+nav ul li:hover {
+    background-color: #444;
+    /* Highlight on hover */
+    color: #ffd700;
+    /* Golden text on hover */
+    border-radius: 5px;
 }
 
 /* Logo Styles */
 .logo {
     height: 30px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 30%;
     object-fit: cover;
+    margin-right: 8px;
 }
 
 /* Animated Photo */
@@ -72,9 +72,11 @@ nav ul li.nav-item:hover {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -87,40 +89,48 @@ nav ul li.nav-item:hover {
 }
 
 .search-input {
-    padding: 4px;
-    width: 120px;
-    border: 1px solid #ccc;
+    padding: 6px;
+    width: 150px;
+    border: 1px solid #555;
     border-radius: 5px;
     margin-right: 5px;
-    font-size: 12px;
+    font-size: 14px;
+    background-color: #2a2a2a;
+    /* Matches the navbar */
+    color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ffd700;
+    /* Golden border on focus */
+    outline: none;
 }
 
 .search-button {
-    padding: 4px 8px;
-    background-color: #555;
-    color: #fff;
+    padding: 5px 10px;
+    background-color: #444;
+    color: #f0f0f0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .search-button:hover {
-    background-color: #777;
+    background-color: #ffd700;
+    /* Golden background on hover */
+    color: #1a1a1a;
+    /* Dark text for contrast */
+    transform: scale(1.05);
+    /* Slight zoom on hover */
 }
 
 /* Responsive Design */
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
     nav {
         flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    nav ul {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .logo, .animated-photo img {
@@ -131,9 +141,24 @@ nav ul li.nav-item:hover {
         width: 100px;
     }
 
-    .search-bar {
-        flex-grow: 1;
-        justify-content: flex-end;
+    .search-button {
+        padding: 3px 6px;
+    }
+} */
+/* Responsive Design */
+@media (max-width: 720px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .logo,
+    .animated-photo img {
+        max-height: 40px;
+        /* Increased from 25px to 40px */
+    }
+
+    .search-input {
+        width: 100px;
     }
 
     .search-button {
@@ -142,3 +167,98 @@ nav ul li.nav-item:hover {
 }
 
 
+.container {
+    min-height: 72vh;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'verela Round', 'sans-serif';
+    display: flex;
+    width: 70%;
+    margin: 23px auto;
+    padding: 34px;
+    border-radius: 12px;
+    background-image: url(/img/DALL·E\ 2024-12-02\ 14.28.30\ -\ A\ serene\ music-themed\ background\ featuring\ a\ softly\ glowing\ guitar\ surrounded\ by\ musical\ notes\ floating\ in\ the\ air.\ The\ setting\ is\ dreamy\,\ with\ a\ blen.webp);
+
+
+}
+
+.bottom {
+    position: sticky;
+    height: 70px;
+    width: 100vw;
+    background-color: rgb(251, 244, 244);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#myProgressBar {
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.songitemContainer {
+
+    margin-top: 34px;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.songItem {
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+
+    background-color: rgb(197, 246, 244);
+
+    color: #1a1a1a;
+    margin: 12px 0;
+
+
+
+}
+
+.songItem img {
+    width: 45px;
+    margin: 0 23px;
+    border-radius: 15px;
+
+
+}
+
+.timeStamp {
+    margin: 0 23px;
+
+}
+
+.timeStamp i {
+
+    cursor: pointer;
+
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'verela Round';
+}
+
+.songInfo img {
+
+    opacity: 0;
+    transition: opacity 1ss ease-in;
+}
